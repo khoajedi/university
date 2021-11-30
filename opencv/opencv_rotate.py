@@ -1,7 +1,6 @@
 import argparse
 import imutils
 import cv2
-from imutils.convenience import rotate
 
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", type=str,
