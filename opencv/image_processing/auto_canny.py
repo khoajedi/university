@@ -1,6 +1,5 @@
 import numpy as np
 import argparse
-import glob
 import cv2
 
 def auto_canny(image, sigma=0.33):
