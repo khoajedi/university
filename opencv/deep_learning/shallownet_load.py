@@ -12,12 +12,12 @@ ap.add_argument("-d", "--dataset", default="./datasets/animals",
                 help="path to input dataset")
 ap.add_argument("-m", "--model", default="./models/shallownet_animals.hdf5",
                 help="path to pre-trained model")
-args = vars(ap.parse_args())
+args = ap.parse_args()
 
 classLabels = ["cat", "dog", "panda"]
 
 print("[INFO] sampling images...")
-imagePaths = np.array(list(paths.list_images(args["dataset"])))
+imagePaths = np.array(list(paths.list_images(args.dataset)))
 idxs = np.random.randint(0, len(imagePaths), size=(10,))
 imagePaths = imagePaths[idxs]
 
