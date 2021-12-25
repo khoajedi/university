@@ -35,8 +35,8 @@ model.fit(x=trainImgX, y=trainY,
           epochs=200, batch_size=8)
 
 print("[INFO] predicting house prices...")
-preds = model.predict(testImgX)
-diff = preds.flatten() - testY
+predY = model.predict(testImgX)
+diff = predY.flatten() - testY
 percentDiff = (diff / testY) * 100
 absPercentDiff = np.abs(percentDiff)
 mean = np.mean(absPercentDiff)
