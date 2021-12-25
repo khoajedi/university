@@ -48,3 +48,5 @@ def create_cnn(width, height, depth, filters=(16, 32, 64), regress=False):
         x = Dense(1, activation="linear")(x)
 
     model = Model(inputs, x)
+
+    return model
